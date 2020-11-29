@@ -1,0 +1,32 @@
+<div class="card">
+  <h4 class="card-header">Tag List</h4>
+  <div class="card-body">
+    <div class="form-group">
+      <a routerLink="/pages/tag" class="btn btn-link">Create Tags</a>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tag of tags; index as i">
+          <th scope="row">{{ tag.tagID }}</th>
+          <td>{{ tag.name  }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="edit(tag.tagID)">
+              Edit
+            </button>
+
+            <button class="btn btn-danger" (click)="delete(tag.tagID)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

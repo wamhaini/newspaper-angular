@@ -1,0 +1,75 @@
+{
+  "test": {
+    "abc": {
+      "token": "abcefghijklmnopqrstuvwxyz",
+      "message": "Login Successfull"
+    }
+  },
+  "login": {
+    "token": "abcefghijklmnopqrstuvwxyz",
+    "message": "Login Successfull"
+  },
+  "teams": [
+    {
+      "id": 1,
+      "name": "FC Barcelona",
+      "coach": "Ernesto Valverde",
+      "description": "The best football team in the world!"
+    },
+    {
+      "id": 2,
+      "name": "Real Madrid",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    }
+  ],
+  "users": [
+    {
+      "UserID": 1,
+      "FirstName": "Rohit",
+      "LastName": "Verma",
+      "Email": "rohit@gmail.com",
+      "Username": "rkv",
+      "Password": "123",
+      "RoleID": 1
+    }
+  ],
+  "role": [
+    {
+      "RoleID": 1,
+      "Name": "amdin"
+    },
+    {
+      "RoleID": 2,
+      "Name": "user"
+    }
+  ],
+  "tag": [
+    {
+      "TagID": 1,
+      "Name": "sports"
+    },
+    {
+      "TagID": 2,
+      "Name": "world"
+    }
+  ],
+  "article": [
+    {
+      "ArticalID": 1,
+      "Title": "Fire in jungle",
+      "SubTitle": "Huge Fire",
+      "ShortSummary": "fire due to gas leak",
+      "Body": "abcdefghijklmnopqrst",
+      "TagID": 1,
+      "UserID": 1,
+      "ArticleStatusID": 1
+    }
+  ],
+  "articlestatus": [
+    {
+      "ArticleStatusID": 1,
+      "Name": "enabled"
+    }
+  ]
+}

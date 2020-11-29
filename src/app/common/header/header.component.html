@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/news"><img src="../assets/img/logo.png" alt="" width="50"
+      height="50"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li *ngIf="isLoggedIn" class="nav-item active">
+        <a class="nav-link" routerLink="/pages/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/news">News</a>
+      </li>
+      <li *ngIf="isLoggedIn" class="nav-item">
+        <a class="nav-link" routerLink="/pages/user-list">Users</a>
+      </li>
+      <li *ngIf="isLoggedIn"  class="nav-item">
+        <a class="nav-link" routerLink="/pages/article-list">Articles</a>
+      </li>
+      <li *ngIf="isLoggedIn"  class="nav-item">
+        <a class="nav-link" routerLink="/pages/tag-list">Tag</a>
+      </li>
+    </ul>
+    <button *ngIf="isLoggedIn; else showLogin" style="width: 101px;"
+      class="navbar-light btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="logout()">Logout
+    </button>
+    <ng-template #showLogin>
+      <button style="width: 101px;" class="navbar-light btn btn-outline-success my-2 my-sm-0" type="submit"
+        routerLink="/login">Login
+      </button>
+
+      <button style="width: 101px;" class="navbar-light btn btn-outline-success my-2 my-sm-0" type="submit"
+      routerLink="/register">New user
+    </button>
+    </ng-template>
+  </div>
+
+
+</nav>

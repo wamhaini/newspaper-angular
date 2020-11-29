@@ -1,0 +1,42 @@
+<div class="card">
+  <h4 class="card-header">Article List</h4>
+  <div class="card-body">
+    <div class="form-group">
+      <a routerLink="/pages/article" class="btn btn-link">New Article</a>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">title</th>
+          <th scope="col">subTitle</th>
+          <th scope="col">shortSummary</th>
+          <th scope="col">body</th>
+          <th scope="col">tag</th>
+          <th scope="col">user</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let article of articles; index as i">
+          <th scope="row">{{ article.articleID | number  }}</th>
+          <td style="width:10%">{{ article.title  }}</td>
+          <td style="width:10%">{{ article.subTitle  }}</td>
+          <td style="width:10%">{{ article.shortSummary  }}</td>
+          <td style="width:10%">{{ article.body  }}</td>
+          <td style="width:10%">{{ article.tag  }}</td>
+          <td style="width:10%">{{ article.user  }}</td>
+          <td style="width:10%">
+            <button class="btn btn-primary" (click)="edit(article.articleID)">
+              Edit
+            </button>
+
+            <button class="btn btn-danger" (click)="delete(article.articleID)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
